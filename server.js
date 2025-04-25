@@ -4,7 +4,7 @@ const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 10000;
 
 // Configure file storage
 const storage = multer.diskStorage({
@@ -58,5 +58,5 @@ app.get('/download/:file', (req, res) => {
 });
 
 app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+  console.log(`Server running on http://0.0.0.0:${port}`);
 });
